@@ -1,0 +1,21 @@
+<html>
+<script>
+N = 0;
+function move(n,source,work,temp)
+{
+    if (n==1)
+    {
+        document.writeln("move"+source+"to"+work+"<br>");
+        N++;
+        console.log("move"+source+"to"+work);
+    }
+    else
+    {
+        move(n-1,source,temp,work);
+        move(1,source,work,temp);
+        move(n-1,temp,work,source);
+    }
+}
+move(7,1,2,3)
+</script>
+</html>
